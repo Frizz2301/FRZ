@@ -19,7 +19,7 @@ class Mahasiswa:
         self.tempat_lahir = tempat_lahir
         self.tanggal_lahir = TanggalLahir(tanggal=tanggal_lahir["tanggal"], bulan=tanggal_lahir["bulan"], tahun=tanggal_lahir["tahun"])
 
-# Contoh penggunaan:
+
 mahasiswa = Mahasiswa(
     nim="123456",
     nama="John Doe",
