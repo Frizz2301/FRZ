@@ -1,60 +1,81 @@
-#include <iostream>
+#include <stdio.h>
 
-using namespace std;
 
 void menu();
-int tambah(int, int);
-int kurang(int, int);
-int kali(int, int);
-int bagi(int, int);
+void tambah();
+void kurang();
+void kali();
+void bagi();
 
 int main() {
-    menu();
-    int num1, num2;
     int choice;
-    cout << "Masukkan 2 angka: ";
-    cin >> num1 >> num2;
-    cout << "1. tambah\n2. kurang\n3. kali\n4. bagi\nMasukan Pilihan Anda: ";
-    cin >> choice;
-    switch (choice) {
-        case 1:
-            cout << "The result is: " << tambah(num1, num2) << endl;
-            break;
-        case 2:
-            cout << "The result is: " << kurang(num1, num2) << endl;
-            break;
-        case 3:
-            cout << "The result is: " << kali(num1, num2) << endl;
-            break;
-        case 4:
-            if (num2 != 0)
-                cout << "The result is: " << bagi(num1, num2) << endl;
-            else
-                cout << "Error: Division by zero is not allowed." << endl;
-            break;
-        default:
-            cout << "Invalid choice!" << endl;
-            break;
-    }
+
+    do {
+        menu();
+        printf("Pilih operasi (1-5): ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                tambah();
+                break;
+            case 2:
+                kurang();
+                break;
+            case 3:
+                kali();
+                break;
+            case 4:
+                bagi();
+                break;
+            case 5:
+                printf("Keluar dari program.\n");
+                break;
+            default:
+                printf("Pilihan tidak valid, coba lagi.\n");
+        }
+    } while (choice != 5);
+
     return 0;
 }
 
 void menu() {
-    cout << "Sistem Operasi!\n";
+    printf("\nMenu Operasi Matematika:\n");
+    printf("1. Tambah\n");
+    printf("2. Kurang\n");
+    printf("3. Kali\n");
+    printf("4. Bagi\n");
+    printf("5. Keluar\n");
 }
 
-int tambah(int num1, int num2) {
-    return num1 + num2;
+void tambah() {
+    int a, b;
+    printf("Masukkan dua angka yang ingin ditambahkan: ");
+    scanf("%d %d", &a, &b);
+    printf("Hasil dari %d + %d = %d\n", a, b, a + b);
 }
 
-int kurang(int num1, int num2) {
-    return num1 - num2;
+void kurang() {
+    int a, b;
+    printf("Masukkan dua angka yang ingin dikurangkan: ");
+    scanf("%d %d", &a, &b);
+    printf("Hasil dari %d - %d = %d\n", a, b, a - b);
 }
 
-int kali(int num1, int num2) {
-    return num1 * num2;
+void kali() {
+    int a, b;
+    printf("Masukkan dua angka yang ingin dikalikan: ");
+    scanf("%d %d", &a, &b);
+    printf("Hasil dari %d * %d = %d\n", a, b, a * b);
 }
 
-int bagi(int num1, int num2) {
-    return num1 / num2;
+void bagi() {
+    int a, b;
+    printf("Masukkan dua angka yang ingin dibagi: ");
+    scanf("%d %d", &a, &b);
+    if (b != 0) {
+        printf("Hasil dari %d / %d = %d\n", a, b, a / b);
+    } else {
+        printf("Error: Tidak bisa membagi dengan nol.\n");
+    }
 }

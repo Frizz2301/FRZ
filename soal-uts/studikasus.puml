@@ -5,13 +5,15 @@ start
 repeat
   :Input pilihan;
   if (pilihan == 1) then (true)
-    :tambah;
+  :tambah;
     repeat
       :Masukan Angka pertama;
       :Masukan Angka Kedua;
-      :Hasil
-    repeat while (pilihan != 3)
+      :Hasil;
+    repeat while (pilihan != 1)
   else (false)
+
+
 
 
 
