@@ -1,0 +1,19 @@
+@startuml
+start
+
+:MENU OPERASI;
+repeat
+  :Input pilihan;
+  if (pilihan == 1) then (true)
+    :tambah;
+    repeat
+      :Masukan Angka pertama;
+      :Masukan Angka Kedua;
+      :Hasil
+    repeat while (pilihan != 3)
+  else (false)
+
+
+
+
+@enduml
