@@ -1,6 +1,9 @@
 # SOAL 1
 ### Jelaskan secara singkat apa itu paradigma dalam bahasa pemograman ??
 # JAWABAN :
+
+Paradigma dalam bahasa pemrograman merujuk pada gaya atau cara berpikir yang digunakan untuk menulis dan mengatur kode dalam sebuah bahasa pemrograman. Ada beberapa paradigma utama dalam pemrograman yang masing-masing menawarkan pendekatan berbeda dalam pemecahan masalah dan pengembangan perangkat lunak. Berikut adalah beberapa paradigma pemrograman yang paling umum.
+
 Pemrograman Prosedural: 
 Memfokuskan pada prosedur atau rutinitas (fungsi atau subrutin). Contoh: C, Pascal.
 

@@ -1,0 +1,8 @@
+@startuml
+
+
+start
+:PRISA COFFEEBARR;
+repeat
+if (pilihan == 1) then(true)
+    :Display MENU TEH;

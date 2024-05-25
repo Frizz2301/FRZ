@@ -1,8 +1,7 @@
 @startuml
 
 start
-
-:MENU PRISA COFFEE SHOP;
+:COFFEE & RACE;
 repeat
   :Input pilihan;
   if (pilihan == 1) then (true)
@@ -11,19 +10,26 @@ repeat
       :Input qty Teh;
       :Calculate total Teh;
       :Display total Teh;
-    repeat while (pilihan != 3)
+    repeat while (pilihan != 4)
   else (false)
     if (pilihan == 2) then (true)
       :Display MENU KOPI;
       repeat
         :Calculate total Kopi;
         :Display total Kopi;
-      repeat while (pilihan != 3)
-    else (false)
+      repeat while (pilihan != 4)
+  else (false)
+    if (pilihan == 3) then (true)
+      :Display MENU WEDANG;
+      repeat
+        :Calculate total Kopi;
+        :Display total Kopi;
+      repeat while (pilihan != 4)
+      else (false)
       :Pilihan Salah;
     endif
   endif
-repeat while (pilihan != 2)
+ while(pilihan != 4)
 
 :Exit;
 stop
