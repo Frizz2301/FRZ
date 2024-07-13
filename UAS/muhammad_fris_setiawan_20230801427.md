@@ -1,7 +1,7 @@
 # JAWABAN ANALISA UAS
 ## STUDI KASUS DENGAN TEMA DATA PARTNER/KERJASAMA
 # NAMA : Muhammad Fris Setiawan
-# NIM : 202308011427
+# NIM : 20230801427
 
 # Data Kerjasama meliputi:
 # Jenis Project
