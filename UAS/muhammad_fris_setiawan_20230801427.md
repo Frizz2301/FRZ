@@ -12,8 +12,5 @@
 # lokasi_proyek
 # tujuan_kerjasama
 
-# Jenis Project
-# Mitra Kerja
-# Tanggal Project
-# Lokasi Project
+
 
