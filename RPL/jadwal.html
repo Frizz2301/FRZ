@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BIOSKOP JADOEL - Login</title>
+  <title>BIOSKOP JADOEL - Jadwal Film</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -44,33 +44,22 @@
     .main-content h2 {
       color: #2c3e50;
     }
-    .login-form {
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      width: 300px;
-      margin: 0 auto;
-    }
-    .login-form input {
+    .schedule-table {
       width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      font-size: 16px;
+      border-collapse: collapse;
+      margin-top: 20px;
     }
-    .login-form button {
+    .schedule-table th, .schedule-table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+    .schedule-table th {
       background-color: #e165d8;
       color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
     }
-    .login-form button:hover {
-      background-color: #b94cd8;
+    .schedule-table td {
+      background-color: white;
     }
     .footer {
       background-color: #2c3e50;
@@ -88,7 +77,7 @@
 
   <!-- Header -->
   <div class="header">
-    <h1>Login - BIOSKOP JADOEL</h1>
+    <h1>Jadwal Film - BIOSKOP JADOEL</h1>
   </div>
 
   <!-- Menu Navigasi -->
@@ -102,18 +91,42 @@
 
   <!-- Main Content -->
   <div class="main-content">
-    <h2>Masuk ke Akun Anda</h2>
-    <p>Silakan masukkan email dan kata sandi Anda untuk melanjutkan.</p>
+    <h2>Jadwal Tayang Film</h2>
+    <p>Berikut adalah jadwal tayang film-film klasik di BIOSKOP JADOEL:</p>
 
-    <!-- Formulir Login -->
-    <div class="login-form">
-      <form action="login_process.php" method="POST">
-        <input type="email" name="email" placeholder="Email Anda" required>
-        <input type="password" name="password" placeholder="Kata Sandi" required>
-        <button type="submit">Masuk</button>
-      </form>
-      <p>Belum memiliki akun? <a href="register.html">Daftar di sini</a></p>
-    </div>
+    <!-- Jadwal Film -->
+    <table class="schedule-table">
+      <thead>
+        <tr>
+          <th>Nama Film</th>
+          <th>Jam Tayang</th>
+          <th>Tanggal</th>
+          <th>Sisa Tiket</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>JAKA SEMBUNG</td>
+          <td>12:00 WIB</td>
+          <td>10 Oktober 2024</td>
+          <td>50 Tiket</td>
+        </tr>
+        <tr>
+          <td>NAGABONAR</td>
+          <td>15:00 WIB</td>
+          <td>10 Oktober 2024</td>
+          <td>60 Tiket</td>
+        </tr>
+        <tr>
+          <td>SIPITUNG</td>
+          <td>18:00 WIB</td>
+          <td>10 Oktober 2024</td>
+          <td>40 Tiket</td>
+        </tr>
+        
+      </tr>
+      </tbody>
+    </table>
   </div>
 
   <!-- Footer -->

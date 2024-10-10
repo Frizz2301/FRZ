@@ -1,0 +1,50 @@
+@startuml
+class Dosen {
+  - NIP: string (PK)
+  - Nama: string
+  - Alamat: string
+  - Telepon: string
+}
+
+class Mahasiswa {
+  - NIM: string (PK)
+  - Nama: string
+  - Alamat: string
+  - Telepon: string
+}
+
+class Matakuliah {
+  - Kode_Matakuliah: string (PK)
+  - Nama_Matakuliah: string
+  - SKS: integer
+}
+
+class Kelas {
+  - Kode_Kelas: string (PK)
+  - Nama_Kelas: string
+  - Kapasitas: integer
+}
+
+class Jadwal {
+  - Kode_Jadwal: string (PK)
+  - Hari: string
+  - Jam: string
+  - Ruangan: string
+}
+
+class KRS {
+  - NIM: string (FK)
+  - Kode_Matakuliah: string (FK)
+  - Kode_Kelas: string (FK)
+  - Semester: string
+}
+
+Dosen --> Matakuliah
+Matakuliah --> KRS
+Mahasiswa --> KRS
+KRS --> Mahasiswa
+KRS --> Matakuliah
+KRS --> Kelas
+Kelas --> Jadwal
+Jadwal --> Kelas
+@enduml

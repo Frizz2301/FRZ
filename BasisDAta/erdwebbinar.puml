@@ -1,0 +1,61 @@
+@startuml
+class Pengajar {
+  - ID_Pengajar: string (PK)
+  - Nama: string
+  - Email: string
+  - Password: string
+}
+
+class Peserta {
+  - ID_Peserta: string (PK)
+  - Nama: string
+  - Email: string
+  - Password: string
+}
+
+class Kursus {
+  - ID_Kursus: string (PK)
+  - Nama_Kursus: string
+  - Deskripsi: string
+  - Tanggal_Mulai: date
+  - Tanggal_Selesai: date
+}
+
+class Webinar {
+  - ID_Webinar: string (PK)
+  - ID_Kursus: string (FK)
+  - Tanggal: date
+  - Waktu: string
+  - Link: string
+}
+
+class Jadwal {
+  - ID_Jadwal: string (PK)
+  - ID_Webinar: string (FK)
+  - Tanggal: date
+  - Waktu: string
+}
+
+class Pendaftaran {
+  - ID_Pendaftaran: string (PK)
+  - ID_Peserta: string (FK)
+  - ID_Kursus: string (FK)
+  - Status: string
+  - Tanggal_Pendaftaran: date
+  - Biaya: integer
+}
+
+class Pembayaran {
+  - ID_Pembayaran: string (PK)
+  - ID_Pendaftaran: string (FK)
+  - Tanggal_Pembayaran: date
+  - Jumlah: integer
+}
+
+Pengajar --> Kursus
+Kursus --> Webinar
+Webinar --> Jadwal
+Peserta --> Pendaftaran
+Pendaftaran --> Pembayaran
+Kursus --> Pendaftaran
+@enduml

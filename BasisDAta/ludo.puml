@@ -1,0 +1,25 @@
+@startuml
+start
+  :Mulai Permainan;
+  :Giliran Pemain;
+  if (Lempar Dadu) then (yes)
+    :Hasil Dadu (1-6);
+    :Pindahkan Token;
+    if (Cek Tabrakan) then (yes)
+      :Kembalikan Token ke Awal;
+    endif
+    if (Cek Keselamatan) then (yes)
+      :Token Aman;
+    endif
+    if (Cek Kemenangan) then (yes)
+      :Pemain Menang;
+      stop
+    endif
+  endif
+  :Ganti Giliran Pemain;
+  if (Permainan Berakhir) then (yes)
+    :Selamat (Pemain Menang);
+    :Selesai;
+    stop
+  endif
+@enduml

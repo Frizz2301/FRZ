@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BIOSKOP JADOEL - Login</title>
+  <title>BIOSKOP JADOEL - Kontak</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -44,15 +44,16 @@
     .main-content h2 {
       color: #2c3e50;
     }
-    .login-form {
+    .contact-form {
       background-color: white;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      width: 300px;
+      width: 400px;
       margin: 0 auto;
     }
-    .login-form input {
+    .contact-form input,
+    .contact-form textarea {
       width: 100%;
       padding: 10px;
       margin-bottom: 15px;
@@ -60,7 +61,7 @@
       border-radius: 5px;
       font-size: 16px;
     }
-    .login-form button {
+    .contact-form button {
       background-color: #e165d8;
       color: white;
       padding: 10px 20px;
@@ -69,7 +70,7 @@
       cursor: pointer;
       font-size: 16px;
     }
-    .login-form button:hover {
+    .contact-form button:hover {
       background-color: #b94cd8;
     }
     .footer {
@@ -88,7 +89,7 @@
 
   <!-- Header -->
   <div class="header">
-    <h1>Login - BIOSKOP JADOEL</h1>
+    <h1>Kontak Kami</h1>
   </div>
 
   <!-- Menu Navigasi -->
@@ -102,17 +103,17 @@
 
   <!-- Main Content -->
   <div class="main-content">
-    <h2>Masuk ke Akun Anda</h2>
-    <p>Silakan masukkan email dan kata sandi Anda untuk melanjutkan.</p>
+    <h2>Hubungi Kami</h2>
+    <p>Jika Anda memiliki pertanyaan atau masukan, jangan ragu untuk menghubungi kami melalui formulir di bawah ini.</p>
 
-    <!-- Formulir Login -->
-    <div class="login-form">
-      <form action="login_process.php" method="POST">
+    <!-- Formulir Kontak -->
+    <div class="contact-form">
+      <form action="submit_contact_form.php" method="POST">
+        <input type="text" name="name" placeholder="Nama Anda" required>
         <input type="email" name="email" placeholder="Email Anda" required>
-        <input type="password" name="password" placeholder="Kata Sandi" required>
-        <button type="submit">Masuk</button>
+        <textarea name="message" rows="5" placeholder="Pesan Anda" required></textarea>
+        <button type="submit">Kirim Pesan</button>
       </form>
-      <p>Belum memiliki akun? <a href="register.html">Daftar di sini</a></p>
     </div>
   </div>
 

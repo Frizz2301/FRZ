@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BIOSKOP JADOEL - Login</title>
+  <title>BIOSKOP JADOEL - Beranda</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -40,37 +40,38 @@
     .main-content {
       padding: 20px;
       text-align: center;
+      background-image: url('bg.jpg'); /* Gambar latar belakang */
+      background-size: cover; /* Agar gambar menutupi seluruh area */
+      background-position: center; /* Gambar ditengah */
+      background-attachment: fixed; /* Agar gambar tetap saat scroll */
+      color: white; /* Warna teks menjadi putih agar kontras dengan gambar */
+      border-radius: 10px;
     }
     .main-content h2 {
-      color: #2c3e50;
+      color: #fff;
     }
-    .login-form {
-      background-color: white;
-      padding: 20px;
+    .films-section {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .film-card {
+      background-color: rgba(4, 0, 11, 0.484);
+      padding: 15px;
+      margin: 10px;
+      width: 200px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      width: 300px;
-      margin: 0 auto;
     }
-    .login-form input {
+    .film-card img {
       width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      font-size: 16px;
+      height: auto;
+      border-radius: 10px;
     }
-    .login-form button {
-      background-color: #e165d8;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    .login-form button:hover {
-      background-color: #b94cd8;
+    .film-card h3 {
+      margin: 10px 0;
+      font-size: 18px;
     }
     .footer {
       background-color: #2c3e50;
@@ -88,7 +89,7 @@
 
   <!-- Header -->
   <div class="header">
-    <h1>Login - BIOSKOP JADOEL</h1>
+    <h1>SELAMAT DATANG DI BIOSKOP JADOEL</h1>
   </div>
 
   <!-- Menu Navigasi -->
@@ -102,23 +103,35 @@
 
   <!-- Main Content -->
   <div class="main-content">
-    <h2>Masuk ke Akun Anda</h2>
-    <p>Silakan masukkan email dan kata sandi Anda untuk melanjutkan.</p>
+    <h2>Film Terbaru</h2>
+    <p>Nikmati pengalaman menonton film klasik yang tak terlupakan di BIOSKOP JADOEL.</p>
 
-    <!-- Formulir Login -->
-    <div class="login-form">
-      <form action="login_process.php" method="POST">
-        <input type="email" name="email" placeholder="Email Anda" required>
-        <input type="password" name="password" placeholder="Kata Sandi" required>
-        <button type="submit">Masuk</button>
-      </form>
-      <p>Belum memiliki akun? <a href="register.html">Daftar di sini</a></p>
+    <!-- Menyisipkan gambar di bagian content -->
+    <img src="bioskop.jpg" alt="Gambar Bioskop Jadoel">
+
+    <!-- Film Section -->
+    <div class="films-section">
+      <div class="film-card">
+        <img src="js.jpg" alt="Film 1">
+        <h3>JAKA SEMBUNG</h3>
+        <p>Tahun: 1981</p>
+      </div>
+      <div class="film-card">
+        <img src="nb.jpg" alt="Film 2">
+        <h3>NAGABONAR</h3>
+        <p>Tahun: 1987</p>
+      </div>
+      <div class="film-card">
+        <img src="pt.jpg" alt="Film 3">
+        <h3>SIPITUNG</h3>
+        <p>Tahun: 1973</p>
+      </div>
     </div>
   </div>
 
   <!-- Footer -->
   <div class="footer">
-    <p>&copy; 2024 BIOSKOP JADOEL. All rights reserved.</p>
+    <p>&copy; 2024 APLIKASI PEMESANAN TIKET BERBASIS WEB. All Rights Reserved.</p>
   </div>
 
 </body>
