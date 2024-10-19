@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Status - A9333</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+    .section-title {
+      font-size: 18px;
+      margin: 15px 0;
+      color: #333;
+      text-decoration: underline;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .status-green {
+      color: green;
+    }
+    .status-red {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Panel Status - A9333</h1>
+
+    <!-- Pedestal Status -->
+    <div class="section">
+      <h2 class="section-title">Pedestal Status</h2>
+      <table>
+        <tr>
+          <th>Status</th>
+          <th>Value</th>
+        </tr>
+        <tr>
+          <td>Az Safe</td>
+          <td class="status-green">Safe</td>
+        </tr>
+        <tr>
+          <td>El Safe</td>
+          <td class="status-green">Safe</td>
+        </tr>
+        <tr>
+          <td>Az Home</td>
+          <td>0.01</td>
+        </tr>
+        <tr>
+          <td>Az Online</td>
+          <td>0.009</td>
+        </tr>
+        <tr>
+          <td>El Home</td>
+          <td>-1.095</td>
+        </tr>
+        <tr>
+          <td>El Online</td>
+          <td>0.00</td>
+        </tr>
+        <tr>
+          <td>Az Operate</td>
+          <td class="status-green">On</td>
+        </tr>
+        <tr>
+          <td>El Operate</td>
+          <td class="status-green">On</td>
+        </tr>
+        <tr>
+          <td>Servo Power</td>
+          <td class="status-green">On</td>
+        </tr>
+        <tr>
+          <td>Az Offset</td>
+          <td>0.00</td>
+        </tr>
+        <tr>
+          <td>Az Velocity</td>
+          <td>0.00</td>
+        </tr>
+        <tr>
+          <td>El Offset</td>
+          <td>0.00</td>
+        </tr>
+        <tr>
+          <td>El Velocity</td>
+          <td>0.00</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Receiver Status -->
+    <div class="section">
+      <h2 class="section-title">Receiver Status</h2>
+      <table>
+        <tr>
+          <th>Status</th>
+          <th>Value</th>
+        </tr>
+        <tr>
+          <td>12 Volts</td>
+          <td>11.92</td>
+        </tr>
+        <tr>
+          <td>15 Volts</td>
+          <td>14.99</td>
+        </tr>
+        <tr>
+          <td>24 Volts</td>
+          <td>24.26</td>
+        </tr>
+        <tr>
+          <td>Rx Temp</td>
+          <td>33.65 °C</td>
+        </tr>
+        <tr>
+          <td>Rx Hum</td>
+          <td>-31.68%</td>
+        </tr>
+        <tr>
+          <td>Air Purge</td>
+          <td class="status-red">Off</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Signal Processor Status -->
+    <div class="section">
+      <h2 class="section-title">Signal Processor Status</h2>
+      <table>
+        <tr>
+          <th>Status</th>
+          <th>Value</th>
+        </tr>
+        <tr>
+          <td>DST External PLL</td>
+          <td>4.9911</td>
+        </tr>
+        <tr>
+          <td>DST V11</td>
+          <td>0.8651</td>
+        </tr>
+        <tr>
+          <td>DST V6</td>
+          <td>2.083</td>
+        </tr>
+        <tr>
+          <td>UST FTAC</td>
+          <td>38.75</td>
+        </tr>
+        <tr>
+          <td>UST TFO</td>
+          <td>17.85</td>
+        </tr>
+        <tr>
+          <td>UST V2</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>DST Temp</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>DST Internal PLL</td>
+          <td>5.0286</td>
+        </tr>
+        <tr>
+          <td>DST V12</td>
+          <td>2.4622</td>
+        </tr>
+        <tr>
+          <td>DST T1</td>
+          <td>5.4551</td>
+        </tr>
+        <tr>
+          <td>DST V13</td>
+          <td>2.2498</td>
+        </tr>
+        <tr>
+          <td>DST V8</td>
+          <td>31.35</td>
+        </tr>
+        <tr>
+          <td>UST T1</td>
+          <td>3.7631</td>
+        </tr>
+        <tr>
+          <td>UST V10</td>
+          <td>1.896</td>
+        </tr>
+        <tr>
+          <td>UST V4</td>
+          <td>-</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Transmitter Status -->
+    <div class="section">
+      <h2 class="section-title">Transmitter Status</h2>
+      <table>
+        <tr>
+          <th>Status</th>
+          <th>Value</th>
+        </tr>
+        <tr>
+          <td>Cab Temp</td>
+          <td>44.4 °C</td>
+        </tr>
+        <tr>
+          <td>Hot Box Temp</td>
+          <td class="status-red">82.6 °C</td>
+        </tr>
+        <tr>
+          <td>Forward Power</td>
+          <td>546</td>
+        </tr>
+        <tr>
+          <td>Reverse Power</td>
+          <td>45</td>
+        </tr>
+        <tr>
+          <td>Radiate</td>
+          <td>On</td>
+        </tr>
+        <tr>
+          <td>Magnetron Air</td>
+          <td>OK</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+</body>
+</html>
