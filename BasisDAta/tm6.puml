@@ -1,0 +1,73 @@
+@startuml
+skinparam linetype ortho
+skinparam rectangle {
+  borderColor black
+  backgroundColor white
+}
+skinparam diamond {
+  borderColor black
+  backgroundColor white
+}
+skinparam circle {
+  borderColor black
+  backgroundColor white
+}
+skinparam usecase {
+  borderColor black
+  backgroundColor white
+}
+skinparam actor {
+  borderColor black
+  backgroundColor white
+}
+skinparam package {
+  borderColor black
+  backgroundColor white
+}
+left to right direction
+
+rectangle "Promotor" as Promotor
+rectangle "Singer" as Singer
+diamond "Merilis" as Merilis
+usecase "total" as total
+usecase "#NoID" as NoID
+usecase "tgllahir" as tgllahir
+usecase "tglliris" as tglliris
+usecase "Jalur music" as Jalurmusic
+usecase "nama" as nama
+usecase "#Namagedung" as Namagedung
+usecase "Alamat" as Alamat
+rectangle "Gedung/Hall" as GedungHall
+usecase "Fasilitas" as Fasilitas
+rectangle "Album" as Album
+usecase "#Nomoralbum" as Nomoralbum
+usecase "Nama" as Namaa
+usecase "Jumlah lagu" as Jumlahlagu
+usecase "Judul" as Judul
+usecase "Merk" as Merk
+usecase "Tglperform" as Tglperform
+usecase "Hak agensi" as Hakagensi
+
+Musisi --|> IS A
+IS A -- Promotor
+IS A -- Singer
+Singer --|> Merilis
+Merilis -- total
+Merilis -- tglliris
+Singer --|> Jalurmusic
+Promotor --|> Mempromosikan
+Mempromosikan -- GedungHall
+GedungHall --|> Namagedung
+GedungHall --|> Alamat
+GedungHall --|> Fasilitas
+Merilis --|> Album
+Album --|> Nomoralbum
+Album --|> Namaa
+Album --|> Jumlahlagu
+Album --|> Judul
+Promotor --|> Merk
+Promotor --|> Tglperform
+Promotor --|> Hakagensi
+Musisi --|> NoID
+Musisi --|> tgllahir
+@enduml

@@ -1,0 +1,39 @@
+@startuml
+start
+
+:1;
+:2;
+:3;
+:4;
+:5;
+:6;
+:7;
+:8;
+if (9) then (yes)
+  :12;
+  :13;
+  :14;
+else (no)
+  if (10) then (yes)
+    :11;
+    :12;
+    :13;
+    :14;
+    if (15) then (yes)
+      :16;
+      :5;
+      :6;
+      :7;
+      :8;
+      :9;
+      :12;
+      :13;
+      :14;
+    endif
+  endif
+endif
+:17;
+:18;
+
+stop
+@enduml

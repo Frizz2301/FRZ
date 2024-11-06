@@ -1,0 +1,33 @@
+@startuml
+start
+:Player rolls the dice;
+if (Is it 6?) then (yes)
+  :Move token out of the starting area;
+else (no)
+  :Move token according to dice;
+endif
+
+:Check if token can move?;
+if (Can move?) then (yes)
+  :Move token forward;
+else (no)
+  :Skip turn;
+endif
+
+:Check for opponent's token on the same spot?;
+if (Opponent on spot?) then (yes)
+  :Send opponent's token back to base;
+else (no)
+  :Continue;
+endif
+
+:Has player reached the final area?;
+if (All tokens reached final?) then (yes)
+  :Player wins!;
+  stop
+else (no)
+  :Next player's turn;
+endif
+
+stop
+@enduml

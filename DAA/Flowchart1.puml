@@ -1,0 +1,35 @@
+@startuml
+
+start
+:1;
+:2;
+:3;
+:4;
+:5;
+:6;
+:7;
+:8;
+
+if (Condition A) then (yes)
+  :9;
+else (no)
+  :10;
+  :11;
+endif
+
+:12;
+:13;
+:14;
+
+if (Condition B) then (yes)
+  :15;
+  :16;
+  :5; // kembali ke node 5 untuk independent path ketiga
+else (no)
+  :17;
+endif
+
+:18;
+stop
+
+@enduml

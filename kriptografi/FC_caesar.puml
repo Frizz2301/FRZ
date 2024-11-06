@@ -1,0 +1,9 @@
+@startuml
+start
+:Masukkan Plaintext dan Kunci (n);
+:Konversi Plaintext ke Angka (A=0, B=1, ..., Z=25);
+:Terapkan Rumus (plaintext + n) % 26;
+:Konversi Hasil ke Huruf (0=A, 1=B, ..., 25=Z);
+:Tampilkan Ciphertext;
+stop
+@enduml

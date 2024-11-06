@@ -1,0 +1,27 @@
+@startuml
+start
+
+:Input plaintext dan kunci;
+:Ubah plaintext dan kunci menjadi uppercase;
+
+:Inisialisasi list ciphertext;
+:Hitung panjang kunci;
+
+repeat
+    :Ambil karakter dari plaintext;
+    if (Apakah karakter adalah huruf?) then (ya)
+        :Hitung indeks huruf plaintext (p_index);
+        :Hitung indeks huruf kunci (k_index);
+        :Hitung indeks terenkripsi (encrypted_index);
+        :Ubah encrypted_index menjadi karakter (encrypted_char);
+        :Tambahkan karakter terenkripsi ke ciphertext;
+    else (tidak)
+        :Tambahkan karakter non-huruf ke ciphertext;
+    endif
+repeat while (Ada karakter yang tersisa?)
+
+:Gabungkan ciphertext menjadi string;
+:Output ciphertext;
+
+stop
+@enduml
