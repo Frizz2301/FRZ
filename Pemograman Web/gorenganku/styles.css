@@ -1,0 +1,123 @@
+/* Umum */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fffef5;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #ffcc00;
+    text-align: center;
+    padding: 2rem 1rem;
+    animation: fadeInDown 1s ease-out;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    color: #5a3e00;
+}
+
+header p {
+    margin: 0.5rem 0 0;
+    font-size: 1.2rem;
+    color: #6e4f00;
+}
+
+/* Produk */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.product {
+    background-color: #fff8dc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 200px;
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+    animation: fadeInUp 1s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    animation: pulse 2s infinite;
+}
+
+.product h2 {
+    margin: 0.5rem 0 0.3rem;
+    font-size: 1.5rem;
+    color: #c06000;
+}
+
+.product p {
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #ffe599;
+    color: #6e4f00;
+    animation: fadeIn 1.5s ease;
+}
+
+/* Animasi Keyframes */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

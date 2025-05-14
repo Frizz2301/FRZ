@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Pattern</title>
+</head>
+<body>
+    <h1>Pattern Bintang Dalam JavaScript</h1>
+    <pre id="output"></pre>
+
+    <script>
+        function printStars() {
+            let output = '';
+            let rows = 5; 
+
+            for (let i = 1; i <= rows; i++) {
+                
+                output += ' '.repeat(rows - i);
+
+                
+                output += '*'.repeat(2 * i - 1);
+
+                
+                output += '\n';
+            }
+
+            // Display the star pattern inside the <pre> tag
+            document.getElementById('output').textContent = output;
+        }
+
+        // Call the function to display the pattern when the page loads
+        printStars();
+    </script>
+</body>
+</html>

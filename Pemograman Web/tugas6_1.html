@@ -1,0 +1,29 @@
+<html>
+<head>
+    <script type="text/javascript">
+        document.write("<h1><center>Menu Lingkaran</center></h1><br>");
+        document.write("<h2>1. Jari - jari lingkaran </h2><br>");
+        document.write("<h2>2. Keliling lingkaran </h2><br>");
+        document.write("<h2>3. Luas lingkaran </h2><br>");
+
+        var bil = prompt("Pilih menu (1, 2, atau 3):");
+
+        if (bil == 1) {
+            var a = prompt("Silakan masukkan jari-jari lingkaran : ");
+            document.write("<h1>Jari-jari lingkaran: " + a + "</h1>");
+        }
+        else if (bil == 2) {
+            var b = prompt("Silakan masukkan jari-jari lingkaran : ");
+            var c = 2 * 3.14 * parseInt(b);
+            document.write("<h1>Keliling lingkaran: " + c + "</h1>");
+        }
+        else if (bil == 3) {
+            var d = prompt("Silakan masukkan jari-jari lingkaran : ");
+            var e = 3.14 * parseInt(d) * parseInt(d);
+            document.write("<h1>Luas lingkaran: " + e + "</h1>");
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

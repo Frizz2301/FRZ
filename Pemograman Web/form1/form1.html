@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Form Elements</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+    }
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #555;
+    }
+    input[type="text"], input[type="email"], input[type="password"],
+    input[type="number"], input[type="date"], input[type="time"],
+    input[type="datetime-local"], input[type="range"], input[type="color"],
+    input[type="url"], input[type="tel"], select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+      box-sizing: border-box;
+    }
+    input[type="radio"], input[type="checkbox"] {
+      margin-right: 5px;
+    }
+    button[type="submit"], button[type="reset"] {
+      background-color: #007bff;
+      color: red;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
+      margin-right: 10px;
+    }
+    button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+    button[type="reset"]:hover {
+      background-color: #6c757d;
+    }
+    .file-upload {
+      border: 1px dashed #ccc;
+      padding: 10px;
+      border-radius: 4px;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <form action="#" method="POST">
+    <h1>HTML Form Elements</h1>
+
+    <div class="form-group">
+      <label for="text_input">Text Input:</label>
+      <input type="text" id="text_input" name="text_input" placeholder="Enter text">
+    </div>
+
+    <div class="form-group">
+      <label for="password_input">Password Input:</label>
+      <input type="password" id="password_input" name="password_input" placeholder="Enter password">
+    </div>
+
+    <div class="form-group">
+      <label for="email_input">Email Input:</label>
+      <input type="email" id="email_input" name="email_input" placeholder="Enter email">
+    </div>
+
+    <div class="form-group">
+      <label for="number_input">Number Input:</label>
+      <input type="number" id="number_input" name="number_input" min="0" max="100" value="50">
+    </div>
+
+    <div class="form-group">
+      <label for="date_input">Date Input:</label>
+      <input type="date" id="date_input" name="date_input">
+    </div>
+
+    <div class="form-group">
+      <label for="time_input">Time Input:</label>
+      <input type="time" id="time_input" name="time_input">
+    </div>
+
+    <div class="form-group">
+      <label for="datetime_local_input">Datetime-Local Input:</label>
+      <input type="datetime-local" id="datetime_local_input" name="datetime_local_input">
+    </div>
+
+    <div class="form-group">
+      <label for="range_input">Range Input:</label>
+      <input type="range" id="range_input" name="range_input" min="0" max="100" value="50">
+      <output for="range_input" id="range_value">50</output>
+    </div>
+
+    <script>
+      const rangeInput = document.getElementById('range_input');
+      const rangeValueOutput = document.getElementById('range_value');
+      rangeInput.addEventListener('input', () => {
+        rangeValueOutput.textContent = rangeInput.value;
+      });
+    </script>
+
+    <div class="form-group">
+      <label for="color_input">Color Input:</label>
+      <input type="color" id="color_input" name="color_input" value="#ff0000">
+    </div>
+
+    <div class="form-group">
+      <label for="url_input">URL Input:</label>
+      <input type="url" id="url_input" name="url_input" placeholder="Enter URL">
+    </div>
+
+    <div class="form-group">
+      <label for="tel_input">Telephone Input:</label>
+      <input type="tel" id="tel_input" name="tel_input" placeholder="Enter phone number">
+    </div>
+
+    <div class="form-group">
+      <label for="select_input">Select Dropdown:</label>
+      <select id="select_input" name="select_input">
+        <option value="" disabled selected>Choose an option</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Radio Buttons:</label>
+      <input type="radio" id="radio1" name="radio_group" value="1">
+      <label for="radio1">Option A</label><br>
+      <input type="radio" id="radio2" name="radio_group" value="2">
+      <label for="radio2">Option B</label>
+    </div>
+
+    <div class="form-group">
+      <label>Checkboxes:</label>
+      <input type="checkbox" id="check1" name="check_group" value="check1">
+      <label for="check1">Check 1</label><br>
+      <input type="checkbox" id="check2" name="check_group" value="check2">
+      <label for="check2">Check 2</label>
+    </div>
+
+    <div class="form-group file-upload">
+      <label for="file_input">File Upload:</label>
+      <input type="file" id="file_input" name="file_input">
+    </div>
+
+    <div class="form-group">
+      <label for="textarea_input">Textarea:</label>
+      <textarea id="textarea_input" name="textarea_input" rows="4" placeholder="Enter your message..."></textarea>
+    </div>
+    
+    <div class="form-group">
+        <label for="file-upload">File Upload:</label>
+        <div class="file-upload">
+            <input type="file" id="file_input" name="file_input">
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label for="hidden_input">Hidden Input:</label>
+        <input type="hidden" id=="hidden_input" name="hidden_input" value="secret_value">
+        <span> (This is not visible to the user) </span>
+        </div>
+    
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Pendaftaran</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Formulir Pendaftaran</h2>
+  <form action="proses.php" method="POST">
+    <label for="nama">Nama:</label><br>
+    <input type="text" id="nama" name="nama"><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br><br>
+
+    <label>Jenis Kelamin:</label><br>
+    <input type="radio" id="laki" name="gender" value="Laki-laki">
+    <label for="laki">Laki-laki</label><br>
+    <input type="radio" id="perempuan" name="gender" value="Perempuan">
+    <label for="perempuan">Perempuan</label><br><br>
+
+    <label>Hobi:</label><br>
+    <input type="checkbox" name="hobi[]" value="Membaca"> Membaca<br>
+    <input type="checkbox" name="hobi[]" value="Menulis"> Menulis<br>
+    <input type="checkbox" name="hobi[]" value="Musik"> Musik<br>
+    <input type="checkbox" name="hobi[]" value="Olahraga"> Olahraga<br><br>
+
+    <label for="kota">Kota:</label><br>
+    <select name="kota" id="kota">
+      <option value="Jakarta">Jakarta</option>
+      <option value="Bandung">Bandung</option>
+      <option value="Surabaya">Surabaya</option>
+    </select><br><br>
+
+    <label for="keterangan">Keterangan:</label><br>
+    <textarea id="keterangan" name="keterangan" rows="4" cols="40"></textarea><br><br>
+
+    <input type="submit" value="Daftar">
+    <input type="reset" value="Reset">
+  </form>
+</body>
+</html>
