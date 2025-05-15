@@ -1,53 +1,74 @@
+
 # 1. Protokol HTTP dan HTTPS
-HTTP (Hypertext Transfer Protocol) adalah protokol komunikasi yang digunakan untuk mentransfer data antara client (biasanya browser) dan server melalui jaringan. HTTP berfungsi untuk mengirimkan permintaan dari client ke server dan menerima respons dari server ke client.
 
-HTTPS (Hypertext Transfer Protocol Secure) adalah versi aman dari HTTP yang menggunakan SSL/TLS (Secure Sockets Layer/Transport Layer Security) untuk mengenkripsi data yang dikirimkan antara client dan server. Dengan HTTPS, data yang ditransfer akan aman dan tidak dapat diintip atau dimodifikasi oleh pihak ketiga.
+**HTTP** (Hypertext Transfer Protocol) adalah protokol komunikasi yang digunakan untuk mentransfer data antara client (biasanya browser) dan server melalui jaringan. HTTP berfungsi untuk mengirimkan permintaan dari client ke server dan menerima respons dari server ke client.
 
-DNS (Domain Name System): DNS berfungsi untuk menerjemahkan nama domain (seperti www.example.com) menjadi alamat IP server yang dapat dipahami oleh jaringan komputer. DNS adalah bagian penting dalam komunikasi HTTP/HTTPS karena tanpa DNS, browser tidak akan tahu alamat IP server yang dituju.
+**HTTPS** (Hypertext Transfer Protocol Secure) adalah versi aman dari HTTP yang menggunakan SSL/TLS (Secure Sockets Layer/Transport Layer Security) untuk mengenkripsi data yang dikirimkan antara client dan server. Dengan HTTPS, data yang ditransfer akan aman dan tidak dapat diintip atau dimodifikasi oleh pihak ketiga.
 
-Status Code HTTP: HTTP menggunakan kode status untuk memberi informasi tentang hasil dari permintaan yang dilakukan. Beberapa kode status yang umum digunakan adalah:
-200 OK: Permintaan berhasil dan server mengembalikan data.
-301 Moved Permanently: Halaman yang diminta telah dipindahkan secara permanen ke URL lain.
-404 Not Found: Halaman yang diminta tidak ditemukan di server.
-500 Internal Server Error: Terjadi kesalahan di sisi server.
+**DNS (Domain Name System):** DNS berfungsi untuk menerjemahkan nama domain (seperti www.example.com) menjadi alamat IP server yang dapat dipahami oleh jaringan komputer. DNS adalah bagian penting dalam komunikasi HTTP/HTTPS karena tanpa DNS, browser tidak akan tahu alamat IP server yang dituju.
 
-Keamanan HTTPS: HTTPS menggunakan SSL/TLS untuk mengamankan komunikasi. Protokol ini memastikan bahwa data yang dikirim antara client dan server dienkripsi, sehingga hanya pihak yang berwenang yang dapat membacanya. Selain itu, SSL/TLS juga memverifikasi identitas server menggunakan sertifikat digital.
+**Status Code HTTP:** HTTP menggunakan kode status untuk memberi informasi tentang hasil dari permintaan yang dilakukan. Beberapa kode status yang umum digunakan adalah:
+- `200 OK`: Permintaan berhasil dan server mengembalikan data.
+- `301 Moved Permanently`: Halaman yang diminta telah dipindahkan secara permanen ke URL lain.
+- `404 Not Found`: Halaman yang diminta tidak ditemukan di server.
+- `500 Internal Server Error`: Terjadi kesalahan di sisi server.
+
+**Keamanan HTTPS:** HTTPS menggunakan SSL/TLS untuk mengamankan komunikasi. Protokol ini memastikan bahwa data yang dikirim antara client dan server dienkripsi, sehingga hanya pihak yang berwenang yang dapat membacanya. Selain itu, SSL/TLS juga memverifikasi identitas server menggunakan sertifikat digital.
+
+---
 
 # 2. Perbedaan HTML, CSS, dan JavaScript dalam Pengembangan Web
-#### HTML (Hypertext Markup Language): HTML adalah bahasa markup yang digunakan untuk struktur dasar halaman web. HTML menyediakan elemen-elemen untuk konten seperti teks, gambar, dan tautan. Fungsi HTML adalah untuk membuat kerangka halaman web.
 
-## Contoh
+### HTML (Hypertext Markup Language)
+
+HTML adalah bahasa markup yang digunakan untuk struktur dasar halaman web. HTML menyediakan elemen-elemen untuk konten seperti teks, gambar, dan tautan. Fungsi HTML adalah untuk membuat kerangka halaman web.
+
+#### Contoh HTML
+```html
 <h1>Muhammad Fris Setiawan</h1>
 <p>Deskripsi singkat tentang saya.</p>
+```
 
-#### CSS (Cascading Style Sheets): CSS digunakan untuk mengatur tampilan visual halaman web, seperti warna, tata letak, dan font. CSS mengontrol gaya elemen-elemen yang ada di halaman HTML.
+### CSS (Cascading Style Sheets)
 
-## Contoh
+CSS digunakan untuk mengatur tampilan visual halaman web, seperti warna, tata letak, dan font. CSS mengontrol gaya elemen-elemen yang ada di halaman HTML.
+
+#### Contoh CSS
+```css
 h1 {
     color: blue;
     font-size: 24px;
 }
+```
 
-#### JavaScript: JavaScript adalah bahasa pemrograman yang digunakan untuk menambahkan interaktivitas pada halaman web. Dengan JavaScript, kita bisa memanipulasi elemen HTML, menangani peristiwa (seperti klik tombol), dan melakukan operasi lainnya secara dinamis.
+### JavaScript
 
-## Contoh
+JavaScript adalah bahasa pemrograman yang digunakan untuk menambahkan interaktivitas pada halaman web. Dengan JavaScript, kita bisa memanipulasi elemen HTML, menangani peristiwa (seperti klik tombol), dan melakukan operasi lainnya secara dinamis.
+
+#### Contoh JavaScript
+```javascript
 document.getElementById('myButton').addEventListener('click', function() {
     alert('Tombol diklik!');
 });
+```
+
+---
 
 # 3. Konsep DOM (Document Object Model) dalam JavaScript
+
 DOM (Document Object Model) adalah representasi struktur HTML halaman web yang memungkinkan JavaScript untuk mengakses dan memanipulasi elemen-elemen HTML secara dinamis. DOM menggambarkan dokumen HTML sebagai objek-objek dan elemen-elemen yang saling terkait.
+
 Dengan JavaScript, kita bisa menggunakan DOM untuk:
 1. Mengubah konten elemen.
 2. Menambah atau menghapus elemen.
 3. Menangani peristiwa (events).
 
-## Contoh
+#### Contoh DOM Manipulation
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
     <title>Contoh DOM Manipulation</title>
 </head>
 <body>
@@ -55,9 +76,48 @@ Dengan JavaScript, kita bisa menggunakan DOM untuk:
     <button id="changeTextButton">Ganti Teks</button>
 
     <script>
-                document.getElementById('changeTextButton').addEventListener('click', function() {
+        document.getElementById('changeTextButton').addEventListener('click', function() {
             document.getElementById('heading').textContent = 'Teks Sudah Diubah!';
         });
     </script>
 </body>
 </html>
+```
+
+---
+
+# 4. Struktur Dasar Halaman HTML
+
+Berikut adalah struktur dasar halaman HTML untuk menampilkan informasi seperti nama, foto, deskripsi singkat, dan tautan ke media sosial. Struktur ini menggunakan tag semantik HTML.
+
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Pribadi</title>
+</head>
+<body>
+    <header>
+        <h1>Nama Saya</h1>
+    </header>
+    
+    <section>
+        <img src="foto.jpg" alt="Foto Profil" width="150" />
+        <p>Deskripsi singkat tentang saya. Saya seorang pengembang web dengan minat dalam teknologi baru.</p>
+    </section>
+
+    <footer>
+        <h3>Ikuti Saya di Media Sosial</h3>
+        <ul>
+            <li><a href="https://facebook.com/nama_saya">Facebook</a></li>
+            <li><a href="https://twitter.com/nama_saya">Twitter</a></li>
+            <li><a href="https://linkedin.com/in/nama_saya">LinkedIn</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
+```
+
+---
