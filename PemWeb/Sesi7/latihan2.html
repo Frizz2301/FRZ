@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator Penjualan Barang</title>
+    <script>
+        function hitungTotal() {
+            var hargaSatuan = 50000;
+            var jumlahBarang = parseInt(document.getElementById("jumlah").value);
+            var diskonPersen = parseFloat(document.getElementById("diskon").value);
+            var totalHarga = jumlahBarang * hargaSatuan;
+
+            //Percabangan: Menghitung Diskon Awal
+            var potonganHarga = (diskonPersen / 100) * totalHarga;
+            var hargaSetelahDiskon = totalHarga - potonganHarga;
+
+            //Percabangan: Menambahkan Diskon Tambahan jika Total Harga > 100rb
+            var diskonTambahan = 0;
+            if (totalHarga > 100000) {
+                diskonTambahan = hargaSetelahDiskon * 0.05;
+                hargaSetelahDiskon -= diskonTambahan;
+            }
+
+            //Perulangan: Menampilkan daftar harga barang
+            var daftarHarga = "<h3>Detail Pembelian:</h3><ul>";
+            for (var i = 1; i <= jumlahBarang; i++) {
+                daftarHarga += "<li>Barang " + i + " - Rp" + hargaSatuan + "</li>";
+            }
+            daftarHarga += "</ul>";
+            
+            //Menampilkan hasil di halaman
+            document.getElementById("hasil").innerHTML = daftarHarga + 
+                "<p><strong>Harga Awal:</strong> Rp " + totalHarga + "</p>" + 
+                "<p><strong>Diskon (" + diskonPersen + "%):</strong> Rp " + potonganHarga + "</p>" + 
+                (diskonTambahan > 0 ? "<p><strong>Diskon Tambahan (5%):</strong> Rp " + diskonTambahan + "</p>" : "") +
+                "<p><strong>Harga Setelah Diskon:</strong> Rp " + hargaSetelahDiskon + "</p>";
+        }
+    </script>
+</head>
+<body>
+    <h1>Kalkulator Penjualan Barang</h1>
+    <p>Harga satuan: Rp 50.000</p>
+
+    <p>Masukkan jumlah barang:</p>
+    <input type="number" id="jumlah" min="1">
+
+    <p>Masukkan diskon (%):</p>
+    <input type="number" id="diskon" min="0" max="100">
+
+    <button onclick="hitungTotal()">Hitung Total</button>
+
+    <div id="hasil"></div>
+</body>
+</html>

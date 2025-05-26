@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <title>Belajar Java Script</title>
+    <script>
+        function HalamanDimuat() {
+            alert ("Halaman telah dimuat sepenuhnya");
+        }
+        function tomboldiklik() {
+            alert("tombol telah diklik")
+        }
+
+    </script>
+<head>
+<body onload="HalamanDimuat()">
+    <h1>Belajar JavaScript</h1>
+    <p> Saya Sedang Belajar Java Script</p>
+    <div id="div_semangat"></div>
+
+    <script>
+        var a = document.getElementById("div_semangat");
+        a.innerHTML = "<p> Sedang Belajar Java Script <p>";
+    </script>
+
+    <h1>Belajar Event Handling - 'onclick'</h1>
+    <button onclick="tomboldiklik()">Klik Saya</button>
+    
+</body>
+</head>
+</html>

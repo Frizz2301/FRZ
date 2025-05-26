@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulasi Harga Produk</title>
+    <script>
+        function hitungHarga () {
+            var namaProduk = "Laptop Gaming";
+            var hargaAwal = 15000000;
+            var diskon = 10;
+            var stok = 3;
+            var kodePromo = document.getElementById("promo").value;
+
+            var potonganHarga = hargaAwal * (diskon / 100);
+            var hargaSetelahDiskon = hargaAwal - potonganHarga;
+
+            if (kodePromo === "DISKON50") {
+                hargaSetelahDiskon -= 500000;
+            }
+
+            var statusProduk = (stok > 0) ? "Produk tersedia, Anda bisa membeli!" : "Produk habis, mohon tunggu restock!";
+            var hargaFinal = (stok > 0 && hargaSetelahDiskon < hargaAwal) ? hargaSetelahDiskon : hargaAwal;
+
+            var infoProduk = "Nama Produk: " + namaProduk + "<br>Harga Awal: Rp " + hargaAwal.toLocaleString() + "<br>Harga Setelah Diskon: Rp " + hargaFinal.toLocaleString();
+
+            document.getElementById("hasil").innerHTML = statusProduk + "<br>" + infoProduk;
+        }
+    </script>
+</head>
+<body>
+    <h1>Kalkulasi Harga Produk dengan JavaScript</h1>
+    <p>Masukkan Kode Promo (jika ada):</p>
+    <input type="text" id="promo" placeholder="masukan kode promo">
+    <button onclick="hitungHarga()">Hitung Harga</button>
+
+    <h2>Hasil Kalkulasi:</h2>
+    <p id="hasil"></p>
+</body>
+</html>
